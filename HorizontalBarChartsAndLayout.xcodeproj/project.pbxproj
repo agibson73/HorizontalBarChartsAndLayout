@@ -12,6 +12,7 @@
 		C0CED27D1CAC31BA00066700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0CED27B1CAC31BA00066700 /* Main.storyboard */; };
 		C0CED27F1CAC31BA00066700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0CED27E1CAC31BA00066700 /* Assets.xcassets */; };
 		C0CED2821CAC31BA00066700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0CED2801CAC31BA00066700 /* LaunchScreen.storyboard */; };
+		C0CED28A1CAC31CE00066700 /* HorizontalDesignableBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CED2891CAC31CE00066700 /* HorizontalDesignableBarChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C0CED27E1CAC31BA00066700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0CED2811CAC31BA00066700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0CED2831CAC31BA00066700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0CED2891CAC31CE00066700 /* HorizontalDesignableBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalDesignableBarChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				C0CED2771CAC31BA00066700 /* AppDelegate.swift */,
 				C0CED2791CAC31BA00066700 /* ViewController.swift */,
+				C0CED2891CAC31CE00066700 /* HorizontalDesignableBarChart.swift */,
 				C0CED27B1CAC31BA00066700 /* Main.storyboard */,
 				C0CED27E1CAC31BA00066700 /* Assets.xcassets */,
 				C0CED2801CAC31BA00066700 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CED28A1CAC31CE00066700 /* HorizontalDesignableBarChart.swift in Sources */,
 				C0CED27A1CAC31BA00066700 /* ViewController.swift in Sources */,
 				C0CED2781CAC31BA00066700 /* AppDelegate.swift in Sources */,
 			);

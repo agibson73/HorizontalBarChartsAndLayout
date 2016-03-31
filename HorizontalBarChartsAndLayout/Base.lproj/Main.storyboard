@@ -1,25 +1,408 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HorizontalBarChartsAndLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="soe-jY-zU9">
+                                <rect key="frame" x="20" y="220" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="57%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="817-hh-iBq">
+                                        <rect key="frame" x="302" y="2" width="33" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1j-7U-OgX" customClass="HorizontalDesignableBarChart" customModule="HorizontalBarChartsAndLayout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="chartValue">
+                                                <real key="value" value="0.56999999999999995"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartFillColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartGraphColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="F1j-7U-OgX" firstAttribute="leading" secondItem="soe-jY-zU9" secondAttribute="leading" id="49S-xD-KFz"/>
+                                    <constraint firstItem="F1j-7U-OgX" firstAttribute="top" secondItem="soe-jY-zU9" secondAttribute="top" id="4Y2-bJ-PbZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="817-hh-iBq" secondAttribute="bottom" constant="2" id="TeB-dZ-rAw"/>
+                                    <constraint firstItem="817-hh-iBq" firstAttribute="top" secondItem="soe-jY-zU9" secondAttribute="top" constant="2" id="WHp-PG-EOB"/>
+                                    <constraint firstAttribute="trailing" secondItem="817-hh-iBq" secondAttribute="trailing" id="apQ-Rl-W5w"/>
+                                    <constraint firstItem="817-hh-iBq" firstAttribute="leading" secondItem="F1j-7U-OgX" secondAttribute="trailing" constant="30" id="pDn-Jt-kh7"/>
+                                    <constraint firstAttribute="bottom" secondItem="F1j-7U-OgX" secondAttribute="bottom" id="vyP-DT-UUl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="San-wm-oDT">
+                                <rect key="frame" x="20" y="270" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXh-nJ-45h">
+                                        <rect key="frame" x="301" y="2" width="34" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="An5-0j-Xfy" customClass="HorizontalDesignableBarChart" customModule="HorizontalBarChartsAndLayout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="chartValue">
+                                                <real key="value" value="0.65000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartFillColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartGraphColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IXh-nJ-45h" secondAttribute="trailing" id="8ra-jy-1yO"/>
+                                    <constraint firstItem="An5-0j-Xfy" firstAttribute="leading" secondItem="San-wm-oDT" secondAttribute="leading" id="Lc3-lu-pID"/>
+                                    <constraint firstItem="IXh-nJ-45h" firstAttribute="top" secondItem="San-wm-oDT" secondAttribute="top" constant="2" id="RmB-9j-Xem"/>
+                                    <constraint firstItem="An5-0j-Xfy" firstAttribute="top" secondItem="San-wm-oDT" secondAttribute="top" id="m2a-xu-3B7"/>
+                                    <constraint firstAttribute="bottom" secondItem="An5-0j-Xfy" secondAttribute="bottom" id="qh5-OY-e4Y"/>
+                                    <constraint firstItem="IXh-nJ-45h" firstAttribute="leading" secondItem="An5-0j-Xfy" secondAttribute="trailing" constant="30" id="wEa-4E-VLl"/>
+                                    <constraint firstAttribute="bottom" secondItem="IXh-nJ-45h" secondAttribute="bottom" constant="2" id="ycf-na-tkh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhb-3c-v5P">
+                                <rect key="frame" x="20" y="570" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvH-fY-1Mx">
+                                        <rect key="frame" x="301" y="2" width="34" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rC-r3-I48" customClass="HorizontalDesignableBarChart" customModule="HorizontalBarChartsAndLayout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="chartValue">
+                                                <real key="value" value="0.90000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartFillColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartGraphColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="CvH-fY-1Mx" firstAttribute="top" secondItem="Yhb-3c-v5P" secondAttribute="top" constant="2" id="4ns-E4-ORx"/>
+                                    <constraint firstItem="4rC-r3-I48" firstAttribute="top" secondItem="Yhb-3c-v5P" secondAttribute="top" id="ELi-o8-HXX"/>
+                                    <constraint firstItem="CvH-fY-1Mx" firstAttribute="leading" secondItem="4rC-r3-I48" secondAttribute="trailing" constant="30" id="J0g-H5-gLs"/>
+                                    <constraint firstAttribute="bottom" secondItem="CvH-fY-1Mx" secondAttribute="bottom" constant="2" id="N5o-Mv-2Fo"/>
+                                    <constraint firstAttribute="bottom" secondItem="4rC-r3-I48" secondAttribute="bottom" id="Zpe-La-4Ic"/>
+                                    <constraint firstItem="4rC-r3-I48" firstAttribute="leading" secondItem="Yhb-3c-v5P" secondAttribute="leading" id="b7c-f9-cGE"/>
+                                    <constraint firstAttribute="trailing" secondItem="CvH-fY-1Mx" secondAttribute="trailing" id="eNT-Q0-I5Z"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="omc-Ne-GlV">
+                                <rect key="frame" x="20" y="470" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPR-J8-Emg">
+                                        <rect key="frame" x="301" y="2" width="34" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pV-js-xOH" customClass="HorizontalDesignableBarChart" customModule="HorizontalBarChartsAndLayout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="chartValue">
+                                                <real key="value" value="0.90000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartFillColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartGraphColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="sPR-J8-Emg" firstAttribute="top" secondItem="omc-Ne-GlV" secondAttribute="top" constant="2" id="BQ5-hq-CKz"/>
+                                    <constraint firstAttribute="bottom" secondItem="sPR-J8-Emg" secondAttribute="bottom" constant="2" id="YjK-tw-OMB"/>
+                                    <constraint firstAttribute="bottom" secondItem="7pV-js-xOH" secondAttribute="bottom" id="ckQ-0g-rHn"/>
+                                    <constraint firstAttribute="trailing" secondItem="sPR-J8-Emg" secondAttribute="trailing" id="i5Q-jY-NVH"/>
+                                    <constraint firstItem="7pV-js-xOH" firstAttribute="top" secondItem="omc-Ne-GlV" secondAttribute="top" id="lLC-jk-WSM"/>
+                                    <constraint firstItem="7pV-js-xOH" firstAttribute="leading" secondItem="omc-Ne-GlV" secondAttribute="leading" id="wCY-aw-kOK"/>
+                                    <constraint firstItem="sPR-J8-Emg" firstAttribute="leading" secondItem="7pV-js-xOH" secondAttribute="trailing" constant="30" id="wHs-oh-9Gi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-PW-no3">
+                                <rect key="frame" x="20" y="520" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fn-o9-bcz">
+                                        <rect key="frame" x="301" y="2" width="34" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="foG-SB-Y2k" customClass="HorizontalDesignableBarChart" customModule="HorizontalBarChartsAndLayout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="chartValue">
+                                                <real key="value" value="0.90000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartFillColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartGraphColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4Fn-o9-bcz" secondAttribute="bottom" constant="2" id="3Cs-L4-aHq"/>
+                                    <constraint firstItem="4Fn-o9-bcz" firstAttribute="top" secondItem="hkg-PW-no3" secondAttribute="top" constant="2" id="FVa-xe-tI8"/>
+                                    <constraint firstItem="foG-SB-Y2k" firstAttribute="leading" secondItem="hkg-PW-no3" secondAttribute="leading" id="N5R-Nv-hfe"/>
+                                    <constraint firstAttribute="bottom" secondItem="foG-SB-Y2k" secondAttribute="bottom" id="NeZ-uh-1UE"/>
+                                    <constraint firstItem="foG-SB-Y2k" firstAttribute="top" secondItem="hkg-PW-no3" secondAttribute="top" id="PMB-a0-UUX"/>
+                                    <constraint firstItem="4Fn-o9-bcz" firstAttribute="leading" secondItem="foG-SB-Y2k" secondAttribute="trailing" constant="30" id="ZLY-BS-ETu"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Fn-o9-bcz" secondAttribute="trailing" id="p1K-Q3-qhV"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZO-Af-73N">
+                                <rect key="frame" x="20" y="320" width="335" height="30"/>
+                                <subviews>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBF-MQ-pai" customClass="HorizontalDesignableBarChart" customModule="HorizontalBarChartsAndLayout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="chartValue">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartFillColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartGraphColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4i-ib-msh">
+                                        <rect key="frame" x="301" y="2" width="34" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="y4i-ib-msh" firstAttribute="leading" secondItem="iBF-MQ-pai" secondAttribute="trailing" constant="30" id="5NA-r6-N2V"/>
+                                    <constraint firstItem="y4i-ib-msh" firstAttribute="top" secondItem="4ZO-Af-73N" secondAttribute="top" constant="2" id="GEi-EB-JsH"/>
+                                    <constraint firstAttribute="bottom" secondItem="y4i-ib-msh" secondAttribute="bottom" constant="2" id="YdX-s8-mwc"/>
+                                    <constraint firstItem="iBF-MQ-pai" firstAttribute="leading" secondItem="4ZO-Af-73N" secondAttribute="leading" id="aVO-5I-qel"/>
+                                    <constraint firstAttribute="trailing" secondItem="y4i-ib-msh" secondAttribute="trailing" id="auB-Yj-5Xm"/>
+                                    <constraint firstAttribute="bottom" secondItem="iBF-MQ-pai" secondAttribute="bottom" id="f9d-dz-gRh"/>
+                                    <constraint firstItem="iBF-MQ-pai" firstAttribute="top" secondItem="4ZO-Af-73N" secondAttribute="top" id="pa2-10-Fld"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uI-a3-3LB">
+                                <rect key="frame" x="20" y="170" width="335" height="30"/>
+                                <subviews>
+                                    <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8c-uI-5dj" customClass="HorizontalDesignableBarChart" customModule="HorizontalBarChartsAndLayout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EE-65-mGh">
+                                                <rect key="frame" x="8" y="2" width="39" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="2EE-65-mGh" firstAttribute="leading" secondItem="c8c-uI-5dj" secondAttribute="leading" constant="8" id="21r-yT-AqC"/>
+                                            <constraint firstItem="2EE-65-mGh" firstAttribute="top" secondItem="c8c-uI-5dj" secondAttribute="top" constant="2" id="iBl-cC-Om2"/>
+                                            <constraint firstAttribute="bottom" secondItem="2EE-65-mGh" secondAttribute="bottom" constant="2" id="oEJ-Uv-fFd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="chartValue">
+                                                <real key="value" value="0.90000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartFillColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="chartGraphColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMv-sW-0ho">
+                                        <rect key="frame" x="301" y="2" width="34" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="c8c-uI-5dj" firstAttribute="top" secondItem="5uI-a3-3LB" secondAttribute="top" id="1US-oe-ak4"/>
+                                    <constraint firstItem="c8c-uI-5dj" firstAttribute="leading" secondItem="5uI-a3-3LB" secondAttribute="leading" id="2OP-kR-L0x"/>
+                                    <constraint firstItem="mMv-sW-0ho" firstAttribute="top" secondItem="5uI-a3-3LB" secondAttribute="top" constant="2" id="7is-M3-Imv"/>
+                                    <constraint firstItem="mMv-sW-0ho" firstAttribute="leading" secondItem="c8c-uI-5dj" secondAttribute="trailing" constant="30" id="7oM-7s-CZr"/>
+                                    <constraint firstAttribute="bottom" secondItem="mMv-sW-0ho" secondAttribute="bottom" constant="2" id="G12-Uv-Y9O"/>
+                                    <constraint firstAttribute="trailing" secondItem="mMv-sW-0ho" secondAttribute="trailing" id="Lfn-Lb-MhH"/>
+                                    <constraint firstAttribute="trailing" secondItem="mMv-sW-0ho" secondAttribute="trailing" id="WXO-db-Yvv"/>
+                                    <constraint firstAttribute="bottom" secondItem="c8c-uI-5dj" secondAttribute="bottom" id="bi4-Wu-pOg"/>
+                                    <constraint firstAttribute="bottom" secondItem="mMv-sW-0ho" secondAttribute="bottom" constant="2" id="mam-rN-EbF"/>
+                                    <constraint firstItem="mMv-sW-0ho" firstAttribute="top" secondItem="5uI-a3-3LB" secondAttribute="top" constant="2" id="rSg-bG-olJ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="zXI-KO-c0Y"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" verticalCompressionResistancePriority="500" text="Programming Languages" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zxy-mo-Pbj">
+                                <rect key="frame" x="40" y="40" width="295" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="L9t-41-dQI"/>
+                                    <constraint firstAttribute="width" secondItem="zxy-mo-Pbj" secondAttribute="height" multiplier="59:6" id="lvT-Zx-hSt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lvT-Zx-hSt"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="300" verticalCompressionResistancePriority="500" text="Design &amp; Media Production" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5DR-yg-1ae">
+                                <rect key="frame" x="40" y="380" width="295" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="60" id="aSs-98-3Q5"/>
+                                    <constraint firstAttribute="width" secondItem="5DR-yg-1ae" secondAttribute="height" multiplier="89:9" id="xip-U5-Sx4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xip-U5-Sx4"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4823529411764706" green="0.14901960784313725" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="San-wm-oDT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="2OJ-Yw-1Y0"/>
+                            <constraint firstItem="soe-jY-zU9" firstAttribute="top" secondItem="5uI-a3-3LB" secondAttribute="bottom" constant="20" id="5NJ-sb-4ha"/>
+                            <constraint firstItem="Yhb-3c-v5P" firstAttribute="top" secondItem="hkg-PW-no3" secondAttribute="bottom" constant="20" id="5gi-l5-KEF"/>
+                            <constraint firstItem="San-wm-oDT" firstAttribute="top" secondItem="soe-jY-zU9" secondAttribute="bottom" constant="20" id="7YC-Ts-OEf"/>
+                            <constraint firstAttribute="trailing" secondItem="San-wm-oDT" secondAttribute="trailing" constant="20" id="8BG-Pv-EHr"/>
+                            <constraint firstAttribute="trailing" secondItem="soe-jY-zU9" secondAttribute="trailing" constant="20" id="8ul-CI-hue"/>
+                            <constraint firstItem="zxy-mo-Pbj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="Bwc-vo-akj"/>
+                            <constraint firstItem="5uI-a3-3LB" firstAttribute="height" secondItem="Yhb-3c-v5P" secondAttribute="height" id="Ewr-8f-dAU"/>
+                            <constraint firstItem="4ZO-Af-73N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="FwG-uK-UHK"/>
+                            <constraint firstItem="zxy-mo-Pbj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ISm-rf-yXw"/>
+                            <constraint firstItem="hkg-PW-no3" firstAttribute="top" secondItem="omc-Ne-GlV" secondAttribute="bottom" constant="20" id="KDo-kO-TIF"/>
+                            <constraint firstItem="5uI-a3-3LB" firstAttribute="top" secondItem="zxy-mo-Pbj" secondAttribute="bottom" constant="30" id="KIv-vH-xqv"/>
+                            <constraint firstItem="5uI-a3-3LB" firstAttribute="height" secondItem="San-wm-oDT" secondAttribute="height" id="LBY-h7-ZrH"/>
+                            <constraint firstItem="4ZO-Af-73N" firstAttribute="top" secondItem="San-wm-oDT" secondAttribute="bottom" constant="20" id="Om2-h3-rWP"/>
+                            <constraint firstAttribute="trailing" secondItem="Yhb-3c-v5P" secondAttribute="trailing" constant="20" id="QBG-1c-mdg"/>
+                            <constraint firstAttribute="trailing" secondItem="4ZO-Af-73N" secondAttribute="trailing" constant="20" id="RpM-wh-Je9"/>
+                            <constraint firstItem="5DR-yg-1ae" firstAttribute="top" secondItem="4ZO-Af-73N" secondAttribute="bottom" constant="30" id="Rub-W7-Np1"/>
+                            <constraint firstItem="soe-jY-zU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="TkP-aM-53q"/>
+                            <constraint firstItem="5uI-a3-3LB" firstAttribute="height" secondItem="hkg-PW-no3" secondAttribute="height" id="XqT-ge-e7m"/>
+                            <constraint firstItem="5uI-a3-3LB" firstAttribute="height" secondItem="soe-jY-zU9" secondAttribute="height" id="Y3m-Qn-Y3e"/>
+                            <constraint firstAttribute="trailing" secondItem="zxy-mo-Pbj" secondAttribute="trailing" constant="40" id="bui-Cz-vpo"/>
+                            <constraint firstItem="hkg-PW-no3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="caL-H2-MTw"/>
+                            <constraint firstAttribute="trailing" secondItem="omc-Ne-GlV" secondAttribute="trailing" constant="20" id="fDu-Mr-YY3"/>
+                            <constraint firstItem="omc-Ne-GlV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="fQn-W3-Ogn"/>
+                            <constraint firstItem="Yhb-3c-v5P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="frX-uV-IwM"/>
+                            <constraint firstItem="omc-Ne-GlV" firstAttribute="top" secondItem="5DR-yg-1ae" secondAttribute="bottom" constant="30" id="fwN-UX-7mX"/>
+                            <constraint firstAttribute="trailing" secondItem="5uI-a3-3LB" secondAttribute="trailing" constant="20" id="gUz-k8-Fko"/>
+                            <constraint firstItem="5DR-yg-1ae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="k5t-sn-gtE"/>
+                            <constraint firstAttribute="trailing" secondItem="hkg-PW-no3" secondAttribute="trailing" constant="20" id="pve-KC-BDx"/>
+                            <constraint firstAttribute="trailing" secondItem="5DR-yg-1ae" secondAttribute="trailing" constant="40" id="qKV-uC-VBU"/>
+                            <constraint firstItem="5uI-a3-3LB" firstAttribute="height" secondItem="omc-Ne-GlV" secondAttribute="height" id="sYb-x2-oBl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yhb-3c-v5P" secondAttribute="bottom" priority="400" constant="50" id="t8O-hD-XSQ"/>
+                            <constraint firstItem="5uI-a3-3LB" firstAttribute="height" secondItem="4ZO-Af-73N" secondAttribute="height" id="tWF-I3-6Xj"/>
+                            <constraint firstItem="5uI-a3-3LB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="wt7-eu-yhc"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-388.5" y="314.5"/>
         </scene>
     </scenes>
 </document>
